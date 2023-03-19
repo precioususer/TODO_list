@@ -13,6 +13,7 @@
 
 body{
     font-family: 'Akshar', sans-serif;
+    min-width: 500px;
     
 }
 
@@ -56,22 +57,22 @@ body{
     width: 40px;
     min-height: 40px;
     min-width: 40px;
-    background-color: rgba(136,255,0,255);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
 }
 
 .addBtn:hover{
-    background-color: rgba(116, 217, 0, 255);
+    background-color: rgb(187, 187, 187);
 }
 
 .addBtn:active{
-    background-color: rgba(100, 200, 0, 255);
+    background-color: rgb(131, 131, 131)
 }
 
 .plus {
-    background: #ffffff;
+    background: rgba(4, 69, 133 ,255);
     height: 25px; 
     width: 5px;
     position: relative; 
@@ -83,7 +84,7 @@ body{
     content: "";
     height: 5px; 
     width: 25px;
-    background: #ffffff;
+    background: rgba(4, 69, 133 ,255);
     position: absolute; 
     left: -10px; 
     top: 10px;
@@ -98,6 +99,9 @@ body{
     max-width: 1270px;
     padding: 0 15px;
     margin: 0 auto;
+    min-height: 150px;
+    background-color: aquamarine;
+    border-radius: 20px;
 }
 
 .card_header {
@@ -106,31 +110,60 @@ body{
     display: flex;
     align-items: center;
     padding-top: 20px;
-    margin-bottom: 50px;
-    column-gap: 80px;
+    margin-bottom: 20px;
+    column-gap: 10px;
     padding-top: 15px;
 }
 
 .title{
     height: 40px;
+    width: 100%;
 }
+
+
+
+
 
 .editBtn{
     height: 40px;
     width: 40px;
-    background-color: rgba(136,255,0,255);
+    background-color: rgba(4, 69, 133, 0.7);
     border-radius: 5px;
     cursor: pointer;
 }
+
+.editBtn:hover{
+    background-color: rgba(4, 69, 133, 0.85);
+}
+
+.editBtn:active{
+    background-color: rgba(4, 69, 133, 1);
+}
+
+
+
+
 
 .delBtn{
     height: 40px;
     width: 40px;
     margin-left: 8px;
-    background-color: rgba(136,255,0,255);
+    background-color: rgba(4, 69, 133, 0.7);
     border-radius: 5px;
     cursor: pointer;
 }
+
+.delBtn:hover{
+    background-color: rgba(4, 69, 133, 0.85);
+}
+
+.delBtn:active{
+    background-color: rgba(4, 69, 133, 1);
+}
+
+
+
+
 
 .btns{
     justify-content: space-between;
@@ -138,6 +171,9 @@ body{
     align-items: center;
 }
 
+.card_descr{
+    width: 100%;
+}
 
 
 
