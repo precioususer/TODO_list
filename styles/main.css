@@ -4,6 +4,7 @@
 
 
 .block{
+    height: 200px;
     background-color: rgb(54, 143, 143); 
 }
 
@@ -30,7 +31,12 @@ body{
 /* HEADER */
 
 .header {
+   
+    justify-content: space-between;
     display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
     column-gap: 80px;
     padding-top: 15px;
 }
@@ -42,14 +48,53 @@ body{
     font-weight: 600;
 }
 
-.addBnt{
-   
+.addBtn{
     height: 40px;
     width: 40px;
     background-color: rgba(136,255,0,255);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.addBtn:hover{
+    background-color: rgba(116, 217, 0, 255);
+}
+
+.plus {
+    background: #ffffff;
+    height: 25px; 
+    width: 5px;
+    position: relative; 
+    left: calc(50% - 2px);
+    top: 7px
+    }
+    .plus:after {
+    content: "";
+    height: 5px; 
+    width: 25px;
+    background: #ffffff;
+    position: absolute; 
+    left: -10px; 
+    top: 10px;
+    }
 
 
 /* rgba(136,255,0,255)
 rgba(0,85,170,255)
+
+.plus {
+background: #CD6D45;
+height: 100px; 
+width: 20px;
+position: relative; 
+left: 40px;
+}
+.plus:after {
+content: "";
+height: 20px; 
+width: 100px;
+background: #CD6D45;
+position: absolute; 
+left: -40px; 
+top: 40px;
+}
