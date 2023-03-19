@@ -1,185 +1,184 @@
 @import url(./reset.css);
 
-
-
-
-.block{
-    height: 200px;
-    background-color: rgb(54, 143, 143); 
-    border-style: solid;
-    border-width: 1px;
-    border-color: blue;
+.block {
+  height: 200px;
+  background-color: rgb(54, 143, 143);
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;
 }
 
-body{
-    font-family: 'Akshar', sans-serif;
-    min-width: 500px;
-    
+body {
+  font-family: "Akshar", sans-serif;
+  min-width: 500px;
+  background: rgba(172, 172, 172, 1);
 }
 
-.gradient{
-    width: 100%;
-    height: 100vh;
-    background: rgba(247,247,247,1);
-    background: linear-gradient(0deg, rgba(247,247,247,1) 0%, rgba(0,85,170,1) 100%);
+.gradient {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgb(172, 172, 172) 0%,
+    rgba(0, 85, 170, 1) 100%
+  );
 }
 
-.container{
-    max-width: 1270px;
-    padding: 0 15px;
-    margin: 0 auto;
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
-
-
 
 /* HEADER */
 
 .header {
-   
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-    margin-bottom: 50px;
-    column-gap: 80px;
-    padding-top: 15px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  column-gap: 80px;
+  padding-top: 15px;
 }
 
-.logo{
-   
-    font-size: 40px;
-    color: #fff;
-    font-weight: 600;
+.logo {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
 }
 
-.addBtn{
-    height: 40px;
-    width: 40px;
-    min-height: 40px;
-    min-width: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    cursor: pointer;
-    overflow: hidden;
+.addBtn {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.4s;
 }
 
-.addBtn:hover{
-    background-color: rgb(187, 187, 187);
+.addBtn:hover {
+  background-color: rgb(187, 187, 187);
 }
 
-.addBtn:active{
-    background-color: rgb(131, 131, 131)
+.addBtn:active {
+  background-color: rgb(131, 131, 131);
 }
 
 .plus {
-    background: rgba(4, 69, 133 ,255);
-    height: 25px; 
-    width: 5px;
-    position: relative; 
-    left: calc(50% - 2px);
-    top: 7px
-    }
+  background: rgba(4, 69, 133, 255);
+  height: 25px;
+  width: 5px;
+  position: relative;
+  left: calc(50% - 2px);
+  top: 7px;
+}
 
 .plus:after {
-    content: "";
-    height: 5px; 
-    width: 25px;
-    background: rgba(4, 69, 133 ,255);
-    position: absolute; 
-    left: -10px; 
-    top: 10px;
-    }
-
-
-
+  content: "";
+  height: 5px;
+  width: 25px;
+  background: rgba(4, 69, 133, 255);
+  position: absolute;
+  left: -10px;
+  top: 10px;
+}
 
 /* TO DO CARDS */
 
-.wrapper{
-    max-width: 1270px;
-    padding: 0 15px;
-    margin: 0 auto;
-    min-height: 150px;
-    background-color: aquamarine;
-    border-radius: 20px;
+.wrapper {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  min-height: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
 }
 
 .card_header {
-   
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    column-gap: 10px;
-    padding-top: 15px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  column-gap: 10px;
+  padding-top: 15px;
 }
 
-.title{
-    height: 40px;
-    width: 100%;
+.title {
+  height: 40px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-
-
-
-
-.editBtn{
-    height: 40px;
-    width: 40px;
-    background-color: rgba(4, 69, 133, 0.7);
-    border-radius: 5px;
-    cursor: pointer;
+.icon {
+  filter: invert(1);
+  height: 30px;
+  width: 30px;
 }
 
-.editBtn:hover{
-    background-color: rgba(4, 69, 133, 0.85);
+.editBtn {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(4, 69, 133, 0.7);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.editBtn:active{
-    background-color: rgba(4, 69, 133, 1);
+.editBtn:hover {
+  background-color: rgba(4, 69, 133, 0.85);
 }
 
-
-
-
-
-.delBtn{
-    height: 40px;
-    width: 40px;
-    margin-left: 8px;
-    background-color: rgba(4, 69, 133, 0.7);
-    border-radius: 5px;
-    cursor: pointer;
+.editBtn:active {
+  background-color: rgba(4, 69, 133, 1);
 }
 
-.delBtn:hover{
-    background-color: rgba(4, 69, 133, 0.85);
+.delBtn {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin-left: 8px;
+  background-color: rgba(4, 69, 133, 0.7);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.delBtn:active{
-    background-color: rgba(4, 69, 133, 1);
+.delBtn:hover {
+  background-color: rgba(4, 69, 133, 0.85);
 }
 
-
-
-
-
-.btns{
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
+.delBtn:active {
+  background-color: rgba(4, 69, 133, 1);
 }
 
-.card_descr{
-    width: 100%;
+.btns {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
+.btns:hover {
+  opacity: 1;
+}
 
-
-
-
-
-
-/* rgba(136,255,0,255)
-rgba(0,85,170,255)
+.card_descr {
+  width: 100%;
+}
