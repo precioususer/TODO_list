@@ -6,6 +6,9 @@
 .block{
     height: 200px;
     background-color: rgb(54, 143, 143); 
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
 }
 
 body{
@@ -51,13 +54,20 @@ body{
 .addBtn{
     height: 40px;
     width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     background-color: rgba(136,255,0,255);
     border-radius: 5px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .addBtn:hover{
     background-color: rgba(116, 217, 0, 255);
+}
+
+.addBtn:active{
+    background-color: rgba(100, 200, 0, 255);
 }
 
 .plus {
@@ -68,7 +78,8 @@ body{
     left: calc(50% - 2px);
     top: 7px
     }
-    .plus:after {
+
+.plus:after {
     content: "";
     height: 5px; 
     width: 25px;
@@ -79,22 +90,60 @@ body{
     }
 
 
+
+
+/* TO DO CARDS */
+
+.wrapper{
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.card_header {
+   
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    column-gap: 80px;
+    padding-top: 15px;
+}
+
+.title{
+    height: 40px;
+}
+
+.editBtn{
+    height: 40px;
+    width: 40px;
+    background-color: rgba(136,255,0,255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delBtn{
+    height: 40px;
+    width: 40px;
+    margin-left: 8px;
+    background-color: rgba(136,255,0,255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btns{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
 /* rgba(136,255,0,255)
 rgba(0,85,170,255)
-
-.plus {
-background: #CD6D45;
-height: 100px; 
-width: 20px;
-position: relative; 
-left: 40px;
-}
-.plus:after {
-content: "";
-height: 20px; 
-width: 100px;
-background: #CD6D45;
-position: absolute; 
-left: -40px; 
-top: 40px;
-}
