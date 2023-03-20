@@ -91,11 +91,11 @@ body {
 
 .wrapper {
   max-width: 1270px;
-  padding: 0 15px;
+  padding: 15px 15px;
   margin-bottom: 20px;
-  min-height: 150px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
+  box-shadow: 2px 2px 10px #000;
 }
 
 .card_header {
@@ -103,7 +103,6 @@ body {
   display: flex;
   align-items: center;
   padding-top: 20px;
-  margin-bottom: 20px;
   column-gap: 10px;
   padding-top: 15px;
 }
@@ -112,8 +111,10 @@ body {
   height: 40px;
   width: 100%;
   font-family: inherit;
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 30px;
+
+  border: 0;
 }
 
 .icon {
@@ -179,6 +180,16 @@ body {
   opacity: 1;
 }
 
-.card_descr {
+textarea {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 20px;
+  overflow-wrap: break-word;
+
+  min-height: 20px;
   width: 100%;
+  resize: none;
+
+  border: 0;
+  overflow: auto;
 }
