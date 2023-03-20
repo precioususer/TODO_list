@@ -1,18 +1,18 @@
 //Генерация карточки
 
 const noteCard = `
-<div class="wrapper">
+<div class="wrapper block_hidden">
 
           <div class="card">
             <div class="card_header">
 
-              <input class="title" type="text" name="card_title"
+              <input id="title" class="title" type="text" name="card_title"
               placeholder="Give me the name..."></input>
   
 
               <div class="btns">
 
-                
+              <div id="checkBtn" class="checkBtn"></div>
                
               <img id="delBtn" class="delBtn" src="./src/delete.png" alt="delete">
                 
@@ -22,7 +22,7 @@ const noteCard = `
 
             </div>
 
-            <textarea id="note" class="card_descr" rows="1"></textarea>
+            <textarea id="card_descr" placeholder="..." class="card_descr" rows="1"></textarea>
 
           </div>
 
@@ -47,5 +47,32 @@ document.addEventListener("click", (e) => {
 
   if (e.target.id === "delBtn") {
     delElement.remove();
+  }
+});
+
+//  Отметка о выполнении
+
+document.addEventListener("click", (e) => {
+  const checkBtn = e.target;
+
+  const noteWrapper =
+    e.target.parentElement.parentElement.parentElement.parentElement;
+
+  const inputTitle = e.target.parentElement.previousElementSibling;
+
+  const description = e.target.parentElement.parentElement.nextElementSibling;
+
+  if (e.target.id === "checkBtn") {
+    noteWrapper.style = "background-color: rgb(200, 244, 135);";
+    inputTitle.style = "background-color: rgb(200, 244, 135);";
+    description.style = "background-color: rgb(200, 244, 135);";
+    checkBtn.style = "background-image: url(../src/done.png);";
+    checkBtn.id = "done";
+  } else if (e.target.id === "done") {
+    noteWrapper.style = "background-color: #fff;";
+    inputTitle.style = "background-color: #fff;";
+    description.style = "background-color: #fff;";
+    checkBtn.style = "background-image: url(../src/check.png);";
+    checkBtn.id = "checkBtn";
   }
 });
