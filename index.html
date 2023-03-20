@@ -35,46 +35,23 @@
   </head>
   <body>
     <div class="gradient">
+      <!--  HEADER  -->
+
       <div class="container">
         <header class="header">
           <div class="logo">
             <h1>TO DO</h1>
           </div>
 
-          <div class="addBtn">
+          <div id="addBtn" class="addBtn">
             <div class="plus"></div>
           </div>
         </header>
       </div>
 
-      <div class="container">
-        <div class="wrapper">
-
-          <div class="card">
-            <div class="card_header">
-              <input class="title" type="text" name="card_title"
-              placeholder="Give me the name..."></input>
-  
-              <div class="btns">
-  
-                <div class="editBtn">
-                  <img class="icon" src="./src/edit.png" alt="edit">
-                </div>
-                <div class="delBtn">
-                  <img class="icon" src="./src/delete.png" alt="delete">
-                </div>
-  
-              </div>
-  
-            </div>
-            <textarea id="note" class="card_descr" rows="1"></textarea>
-          </div>
-
-        </div>
-
-      </div>
+      <!--  NOTES  -->
+      <div id="notesArea" class="container"></div>
     </div>
-
     <script src="./js/index.js"></script>
   </body>
 </html>

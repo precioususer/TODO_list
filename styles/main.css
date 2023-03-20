@@ -48,6 +48,8 @@ body {
   font-weight: 600;
 }
 
+/*  ADD BTN  */
+
 .addBtn {
   height: 40px;
   width: 40px;
@@ -97,6 +99,7 @@ body {
   border-radius: 20px;
   box-shadow: 2px 2px 10px #000;
 }
+/*background-color: rgba(4, 69, 133, 1);*/
 
 .card_header {
   justify-content: space-between;
@@ -107,23 +110,9 @@ body {
   padding-top: 15px;
 }
 
-.title {
-  height: 40px;
-  width: 100%;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 30px;
+/*  CHEKBOX  */
 
-  border: 0;
-}
-
-.icon {
-  filter: invert(1);
-  height: 30px;
-  width: 30px;
-}
-
-.editBtn {
+.checkBtn {
   display: block;
   height: 40px;
   width: 40px;
@@ -137,36 +126,39 @@ body {
   align-items: center;
 }
 
-.editBtn:hover {
+.checkBtn:hover {
   background-color: rgba(4, 69, 133, 0.85);
 }
 
-.editBtn:active {
+.checkBtn:active {
   background-color: rgba(4, 69, 133, 1);
 }
 
+/*  DELETE BTN  */
+
 .delBtn {
-  display: block;
   height: 40px;
   width: 40px;
   margin-left: 8px;
-  background-color: rgba(4, 69, 133, 0.7);
+  opacity: 0.7;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
 
 .delBtn:hover {
-  background-color: rgba(4, 69, 133, 0.85);
+  opacity: 0.85;
 }
 
 .delBtn:active {
-  background-color: rgba(4, 69, 133, 1);
+  opacity: 1;
 }
+
+/*  BTNS FORMAT  */
 
 .btns {
   justify-content: space-between;
@@ -178,6 +170,18 @@ body {
 
 .btns:hover {
   opacity: 1;
+}
+
+/*  TITLE & Descr.  */
+
+.title {
+  height: 40px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 30px;
+
+  border: 0;
 }
 
 textarea {
