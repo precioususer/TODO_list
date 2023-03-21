@@ -7,7 +7,7 @@ const noteCard = `
             <div class="card_header">
 
               <input id="title" class="title" type="text" name="card_title"
-              placeholder="Give me the name..."></input>
+              placeholder="Give me the name..." spellcheck="false"></input>
   
 
               <div class="btns">
@@ -22,7 +22,7 @@ const noteCard = `
 
             </div>
 
-            <textarea id="card_descr" placeholder="..." class="card_descr" rows="1"></textarea>
+            <textarea id="card_descr" placeholder="..." class="card_descr" rows="1" spellcheck="false"></textarea>
 
           </div>
 
@@ -76,3 +76,16 @@ document.addEventListener("click", (e) => {
     checkBtn.id = "checkBtn";
   }
 });
+
+//  Авторасширение описания карточки
+
+const tx = document.getElementsByTagName("textarea");
+for (let i = 0; i < tx.length; i++) {
+  tx[i].style = `height:" + ${tx[i].scrollHeight}px; overflow-y:hidden`;
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = 0;
+  this.style.height = this.scrollHeight + "px";
+}
