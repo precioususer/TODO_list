@@ -66,13 +66,13 @@ document.addEventListener("click", (e) => {
     noteWrapper.style = "background-color: rgb(200, 244, 135);";
     inputTitle.style = "background-color: rgb(200, 244, 135);";
     description.style = "background-color: rgb(200, 244, 135);";
-    checkBtn.style = "background-image: url(../src/done.png);";
+    checkBtn.style = "background-image: url(./../src/done.png);";
     checkBtn.id = "done";
   } else if (e.target.id === "done") {
     noteWrapper.style = "background-color: #fff;";
     inputTitle.style = "background-color: #fff;";
     description.style = "background-color: #fff;";
-    checkBtn.style = "background-image: url(../src/check.png);";
+    checkBtn.style = "background-image: url(./../src/check.png);";
     checkBtn.id = "checkBtn";
   }
 });
