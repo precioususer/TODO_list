@@ -1,91 +1,79 @@
-//Генерация карточки
-
-const noteCard = `
-<div class="wrapper block_hidden">
-
-          <div class="card">
-            <div class="card_header">
-
-              <input id="title" class="title" type="text" name="card_title"
-              placeholder="Give me the name..." spellcheck="false"></input>
-  
-
-              <div class="btns">
-
-              <div id="checkBtn" class="checkBtn"></div>
-               
-              <img id="delBtn" class="delBtn" src="./src/delete.png" alt="delete">
-                
-  
-              </div>
-
-
-            </div>
-
-            <textarea id="card_descr" placeholder="..." class="card_descr" rows="1" spellcheck="false"></textarea>
-
-          </div>
-
-        </div>
-`;
-
-//  Добавление карточки
-
 const notesArea = document.getElementById("notesArea");
 
-const addBtn = document.getElementById("addBtn");
+const addBtn = document.querySelector(".addBtn");
 
-addBtn.addEventListener("click", () =>
-  notesArea.insertAdjacentHTML("afterbegin", noteCard)
-);
+function createNote() {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("wrapper");
 
-//  Удаление карточки
+  const card = document.createElement("div");
+  card.classList.add("card");
 
+  const cardHeader = document.createElement("div");
+  cardHeader.classList.add("cardHeader");
+
+  const title = document.createElement("input");
+  title.classList.add("title");
+  title.setAttribute("placeholder", "Give me the name...");
+  title.setAttribute("spellchek", "false");
+  title.setAttribute("type", "text");
+
+  const btns = document.createElement("div");
+  btns.classList.add("btns");
+
+  const checkBtn = document.createElement("div");
+  checkBtn.setAttribute("id", "checkBtn");
+  checkBtn.classList.add("checkBtn");
+
+  const delBtn = document.createElement("div");
+  delBtn.classList.add("delBtn");
+
+  const cardDescr = document.createElement("textarea");
+  cardDescr.classList.add("cardDescr");
+  cardDescr.setAttribute("spellchek", "false");
+  cardDescr.setAttribute("rows", "1");
+  cardDescr.setAttribute("placeholder", "...");
+
+  notesArea.appendChild(wrapper);
+  wrapper.appendChild(card);
+
+  card.appendChild(cardHeader);
+  card.appendChild(cardDescr);
+
+  cardHeader.appendChild(title);
+  cardHeader.appendChild(btns);
+
+  btns.appendChild(checkBtn);
+  btns.appendChild(delBtn);
+}
+// Create new note
+addBtn.addEventListener("click", () => createNote());
+
+// Delete note
 document.addEventListener("click", (e) => {
-  const delElement =
-    e.target.parentElement.parentElement.parentElement.parentElement;
-
-  if (e.target.id === "delBtn") {
-    delElement.remove();
-  }
+  const delNote = e.target.closest(".wrapper");
+  e.target.className === "delBtn" ? delNote.remove() : null;
 });
 
-//  Отметка о выполнении
+// Check note
 
 document.addEventListener("click", (e) => {
   const checkBtn = e.target;
-
-  const noteWrapper =
-    e.target.parentElement.parentElement.parentElement.parentElement;
-
-  const inputTitle = e.target.parentElement.previousElementSibling;
-
-  const description = e.target.parentElement.parentElement.nextElementSibling;
+  const note = e.target.closest(".wrapper");
+  const input = e.target.closest(".title");
+  const cardDescr = e.target.closest(".cardDescr");
 
   if (e.target.id === "checkBtn") {
-    noteWrapper.style = "background-color: rgb(200, 244, 135);";
-    inputTitle.style = "background-color: rgb(200, 244, 135);";
-    description.style = "background-color: rgb(200, 244, 135);";
-    checkBtn.style = "background-image: url(./done.png);";
+    note.setAttribute("background-color", "var(--done-note)");
+    input.setAttribute("background-color", "var(--done-note)");
+    cardDescr.setAttribute("background-color", "var(--done-note)");
+    checkBtn.setAttribute("background-image", "url(./done.png);");
     checkBtn.id = "done";
-  } else if (e.target.id === "done") {
-    noteWrapper.style = "background-color: #fff;";
-    inputTitle.style = "background-color: #fff;";
-    description.style = "background-color: #fff;";
-    checkBtn.style = "background-image: url(./check.png);";
+  } else if (e.target.className === "done") {
+    note.setAttribute("background-color", "#fff");
+    input.setAttribute("background-color", "#fff");
+    cardDescr.setAttribute("background-color", "#fff");
+    checkBtn.setAttribute("background-image", "url(./check.png);");
     checkBtn.id = "checkBtn";
   }
 });
-
-//  Авторасширение описания карточки
-
-const tx = document.getElementsByTagName("textarea");
-for (let i = 0; i < tx.length; i++) {
-  tx[i].style = `height:" + ${tx[i].scrollHeight}px; overflow-y:hidden`;
-  tx[i].addEventListener("input", OnInput, false);
-}
-
-function OnInput() {
-  this.style.height = 0;
-  this.style.height = this.scrollHeight + "px";
-}
