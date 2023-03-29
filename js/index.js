@@ -31,7 +31,7 @@ function createNote() {
   delBtn.classList.add("delBtn");
   const delImg = document.createElement("img");
   delImg.classList.add("delImg");
-  delImg.setAttribute("src", "./../delete1.png");
+  delImg.setAttribute("src", "./delete1.png");
 
   const cardDescr = document.createElement("textarea");
   cardDescr.classList.add("cardDescr");
